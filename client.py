@@ -12,7 +12,11 @@ ad = ""
 ctk.set_appearance_mode("dark") 
 ctk.set_default_color_theme("blue")
 
-    
+try:
+    os.mkdir("AlinanDosyalar")
+except:
+    pass
+
 try:
     server = socket(AF_INET, SOCK_STREAM)
     server.connect(("localhost",7523))
